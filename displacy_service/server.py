@@ -58,7 +58,9 @@ class ModelsResource(object):
             output = list(MODELS)
             resp.body = json.dumps(output, sort_keys=True, indent=2)
             resp.content_type = 'text/string'
-            resp.append_header('Access-Control-Allow-Origin', "*")
+            resp.set_header('Access-Control-Allow-Origin', '*')
+            resp.set_header('Access-Control-Allow-Methods', '*')
+            resp.set_header('Access-Control-Allow-Headers', '*')
             resp.status = falcon.HTTP_200
         except Exception:
             resp.status = falcon.HTTP_500
@@ -76,7 +78,9 @@ class VersionResource(object):
                 "spacy": spacy.about.__version__
             }, sort_keys=True, indent=2)
             resp.content_type = 'text/string'
-            resp.append_header('Access-Control-Allow-Origin', "*")
+            resp.set_header('Access-Control-Allow-Origin', '*')
+            resp.set_header('Access-Control-Allow-Methods', '*')
+            resp.set_header('Access-Control-Allow-Headers', '*')
             resp.status = falcon.HTTP_200
         except Exception:
             resp.status = falcon.HTTP_500
@@ -100,7 +104,9 @@ class SchemaResource(object):
 
             resp.body = json.dumps(output, sort_keys=True, indent=2)
             resp.content_type = 'text/string'
-            resp.append_header('Access-Control-Allow-Origin', "*")
+            resp.set_header('Access-Control-Allow-Origin', '*')
+            resp.set_header('Access-Control-Allow-Methods', '*')
+            resp.set_header('Access-Control-Allow-Headers', '*')
             resp.status = falcon.HTTP_200
         except Exception as e:
             raise falcon.HTTPBadRequest(
@@ -127,7 +133,9 @@ class DepResource(object):
             parse = Parse(model, text, collapse_punctuation, collapse_phrases)
             resp.body = json.dumps(parse.to_json(), sort_keys=True, indent=2)
             resp.content_type = 'text/string'
-            resp.append_header('Access-Control-Allow-Origin', "*")
+            resp.set_header('Access-Control-Allow-Origin', '*')
+            resp.set_header('Access-Control-Allow-Methods', '*')
+            resp.set_header('Access-Control-Allow-Headers', '*')
             resp.status = falcon.HTTP_200
         except Exception as e:
             raise falcon.HTTPBadRequest(
@@ -149,7 +157,9 @@ class EntResource(object):
             resp.body = json.dumps(entities.to_json(), sort_keys=True,
                                    indent=2)
             resp.content_type = 'text/string'
-            resp.append_header('Access-Control-Allow-Origin', "*")
+            resp.set_header('Access-Control-Allow-Origin', '*')
+            resp.set_header('Access-Control-Allow-Methods', '*')
+            resp.set_header('Access-Control-Allow-Headers', '*')
             resp.status = falcon.HTTP_200
         except Exception:
             resp.status = falcon.HTTP_500
@@ -170,7 +180,9 @@ class SentsResources(object):
             resp.body = json.dumps(sentences.to_json(), sort_keys=True,
                                    indent=2)
             resp.content_type = 'text/string'
-            resp.append_header('Access-Control-Allow-Origin', "*")
+            resp.set_header('Access-Control-Allow-Origin', '*')
+            resp.set_header('Access-Control-Allow-Methods', '*')
+            resp.set_header('Access-Control-Allow-Headers', '*')
             resp.status = falcon.HTTP_200
         except Exception:
             resp.status = falcon.HTTP_500

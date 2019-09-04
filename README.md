@@ -2,6 +2,8 @@
 
 **Ready-to-use Docker images for the [spaCy NLP library](https://github.com/explosion/spaCy).**
 
+**THIS FORK ADDS CORS SUPPORT**
+
 ### Features
 
 - Use the awesome spaCy NLP framework with other programming languages.
@@ -12,7 +14,7 @@
 - Automated builds to stay up to date with spaCy.
 - Current spaCy version: 2.0.16
 
-Please note that this is a completely new API and is incompatible with the previous one. If you still need them, use `jgontrum/spacyapi:en-legacy` or `jgontrum/spacyapi:de-legacy`.
+Please note that this is a completely new API and is incompatible with the previous one. If you still need them, use `aolney/spacyapi:en-legacy` or `aolney/spacyapi:de-legacy`.
 
 _Documentation, API- and frontend code based upon [spaCy REST services](https://github.com/explosion/spacy-services) by [Explosion AI](https://explosion.ai)._
 
@@ -22,31 +24,22 @@ _Documentation, API- and frontend code based upon [spaCy REST services](https://
 
 | Image                       | Description                                                       |
 | --------------------------- | ----------------------------------------------------------------- |
-| jgontrum/spacyapi:base_v2   | Base image for spaCy 2.0, containing no language model            |
-| jgontrum/spacyapi:en_v2     | English language model, spaCy 2.0                                 |
-| jgontrum/spacyapi:de_v2     | German language model, spaCy 2.0                                  |
-| jgontrum/spacyapi:es_v2     | Spanish language model, spaCy 2.0                                 |
-| jgontrum/spacyapi:fr_v2     | French language model, spaCy 2.0                                  |
-| jgontrum/spacyapi:pt_v2     | Portuguese language model, spaCy 2.0                              |
-| jgontrum/spacyapi:it_v2     | Italian language model, spaCy 2.0                                 |
-| jgontrum/spacyapi:nl_v2     | Dutch language model, spaCy 2.0                                   |
-| jgontrum/spacyapi:all_v2    | Contains EN, DE, ES, PT, NL, IT and FR language models, spaCy 2.0 |
-| _OLD RELEASES_              |                                                                   |
-| jgontrum/spacyapi:base      | Base image, containing no language model                          |
-| jgontrum/spacyapi:latest    | English language model                                            |
-| jgontrum/spacyapi:en        | English language model                                            |
-| jgontrum/spacyapi:de        | German language model                                             |
-| jgontrum/spacyapi:es        | Spanish language model                                            |
-| jgontrum/spacyapi:fr        | French language model                                             |
-| jgontrum/spacyapi:all       | Contains EN, DE, ES and FR language models                        |
-| jgontrum/spacyapi:en-legacy | Old API with English model                                        |
-| jgontrum/spacyapi:de-legacy | Old API with German model                                         |
+| aolney/spacyapi:base_v2   | Base image for spaCy 2.0, containing no language model            |
+| aolney/spacyapi:en_v2     | English language model, spaCy 2.0                                 |
+| aolney/spacyapi:de_v2     | German language model, spaCy 2.0                                  |
+| aolney/spacyapi:es_v2     | Spanish language model, spaCy 2.0                                 |
+| aolney/spacyapi:fr_v2     | French language model, spaCy 2.0                                  |
+| aolney/spacyapi:pt_v2     | Portuguese language model, spaCy 2.0                              |
+| aolney/spacyapi:it_v2     | Italian language model, spaCy 2.0                                 |
+| aolney/spacyapi:nl_v2     | Dutch language model, spaCy 2.0                                   |
+| aolney/spacyapi:all_v2    | Contains EN, DE, ES, PT, NL, IT and FR language models, spaCy 2.0 |
+
 
 ---
 
 ## Usage
 
-`docker run -p "127.0.0.1:8080:80" jgontrum/spacyapi:en_v2`
+`docker run -p "127.0.0.1:8080:80" aolney/spacyapi:en_v2`
 
 All models are loaded at start up time. Depending on the model size and server
 performance, this can take a few minutes.
@@ -60,7 +53,7 @@ version: '2'
 
 services:
   spacyapi:
-    image: jgontrum/spacyapi:en_v2
+    image: aolney/spacyapi:en_v2
     ports:
       - "127.0.0.1:8080:80"
     restart: always

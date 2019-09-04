@@ -5,8 +5,8 @@ setup(
     version='0.1',
     description='REST microservice for Explosion AI\'s interactive demos ' +
                 'and visualisers.',
-    author='explosion.ai & Johannes Gontrum',
-    author_email='gontrum@me.com',
+    author='explosion.ai & Johannes Gontrum & Andrew Olney',
+    author_email='aolney@memphis.edu',
     include_package_data=True,
     license='MIT',
     entry_points={
