@@ -2,7 +2,7 @@
 
 **Ready-to-use Docker images for the [spaCy NLP library](https://github.com/explosion/spaCy).**
 
-**THIS FORK ADDS CORS SUPPORT**
+**THIS FORK ADDS CORS SUPPORT** to https://github.com/jgontrum/spacy-api-docker
 
 ### Features
 
@@ -13,8 +13,6 @@
 - Docker images for **English**, **German**, **Spanish**, **Italian**, **Dutch** and **French**.
 - Automated builds to stay up to date with spaCy.
 - Current spaCy version: 2.0.16
-
-Please note that this is a completely new API and is incompatible with the previous one. If you still need them, use `aolney/spacyapi:en-legacy` or `aolney/spacyapi:de-legacy`.
 
 _Documentation, API- and frontend code based upon [spaCy REST services](https://github.com/explosion/spacy-services) by [Explosion AI](https://explosion.ai)._
 
