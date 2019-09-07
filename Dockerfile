@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install node for the frontend
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
-  apt-get install -y nodejs &&\
+  apt-get install -y nodejs npm &&\
   apt-get -q clean -y && rm -rf /var/lib/apt/lists/* && rm -f /var/cache/apt/*.bin
 
 # Copy and set up the app
