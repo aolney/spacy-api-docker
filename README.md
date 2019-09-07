@@ -1,5 +1,7 @@
 # spaCy API Docker
 
+[![Build Status](https://travis-ci.org/aolney/spacy-api-docker.svg?branch=master)](https://travis-ci.org/aolney/spacy-api-docker)
+
 **Ready-to-use Docker images for the [spaCy NLP library](https://github.com/explosion/spaCy).**
 
 **THIS FORK ADDS CORS SUPPORT** to https://github.com/jgontrum/spacy-api-docker
