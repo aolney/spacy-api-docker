@@ -5,7 +5,7 @@ cd /tmp/sass
 git clone https://github.com/sass/sassc.git
 #choose last building commit
 cd sassc
-git reset --hard 3f84e2358019dab2fdba5fe1fc0ecff23aa24608
+git reset --hard aa6d5c635ea8faf44d542a23aaf85d27e5777d48
 cd ..
 #end choose last building commit
 . sassc/script/bootstrap
